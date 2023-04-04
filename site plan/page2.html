@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title> We got your back and bank </title>
+</head>
+<body>
+    <header>
+        
+        <a id="logo_link" href="index.html">
+            <img class="logo" src="./Images/logo.png" alt= "Dry Oar Logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="./page2.html">Page 2</a>
+            <a href="./aboutus.html"> About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+    </header>
+    <div class = "content">
+    <div id="hero">
+        <div id="hero-box">
+            <img id="hero-img" src="./Images/hot deals.png" alt="Deals">
+        </div>
+        <h1>Compare two brands click the button beside the logo to compare</h1>
+        <div class="image-grid">
+          <div class="image-box">
+            <img id= "amazon-img"  src="./Images/amazon.jpg" alt="Image 1">
+            <button onclick="selectImage(1)">Amazon</button>
+          </div>
+          <div class="image-box">
+            <img id="HandM-img" src="./Images/H and M.png" alt="Image 2">
+            <button onclick="selectImage(2)">H&M</button>
+          </div>
+          <div class="image-box">
+            <img img id="nike-img" src="./Images/just do it.jpg" alt="Image 3">
+            <button onclick="selectImage(3)">Nike</button>
+          </div>
+          <div class="image-box">
+            <img id="OldNavy-img" src="./Images/old navy.jpg" alt="Image 4">
+            <button onclick="selectImage(4)">OldNavy</button>
+          </div>
+        </div>
+        <div id="selected-images">
+          <h2>Selected Brands</h2>
+          <div class="selected-box">
+            <img id="selected1" src="" alt="">
+            <img id="selected2" src="" alt="">
+          </div>
+          <button onclick="compareImages()">Compare Images</button>
+        </div>
+        <script>
+          var selectedImage1, selectedImage2;
+    
+          function selectImage(imageNum) {
+            var imageSrc = document.querySelector('.image-box:nth-child(' + imageNum + ') img').src;
+            if (!selectedImage1) {
+              selectedImage1 = imageSrc;
+              document.getElementById('selected1').src = selectedImage1;
+            } else if (!selectedImage2) {
+              selectedImage2 = imageSrc;
+              document.getElementById('selected2').src = selectedImage2;
+            } else {
+              alert('You can only select two images for comparison');
+            }
+          }
+    
+          function compareImages() {
+            if (selectedImage1 && selectedImage2) {
+              // perform comparison logic here
+              alert('Comparing ' + selectedImage1 + ' and ' + selectedImage2);
+            } else {
+              alert('Please select two images for comparison');
+            }
+          }
+        </script>
+
+    </section>
+
+    <footer>
+        <p>Dry Oar &copy; 2023 - Subodh</p>
+      
+        <p><a href="contactus.html">Contact Us</a></p>
+        <!-- Some comment -->
+        <div class="social">
+            <a href="https://facebook.com">
+                <img src="https://byui-wdd.github.io/wdd130/rafting_images/facebook.png" alt="fb icon">
+            </a>
+            <a href="https://twitter.com">
+                <img src="https://byui-wdd.github.io/wdd130/rafting_images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="https://byui-wdd.github.io/wdd130/rafting_images/instagram.png" alt="instagram icon">
+            <a href="SitePlanning.html">site plan</a>
+            </a>
+        </div>
+    </footer>
