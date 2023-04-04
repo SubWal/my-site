@@ -46,7 +46,10 @@ nav{
     width: 400px ;
     margin-left: 20px;
     border-radius: 1em;
-} 
+}
+#bingeshopping{
+    width: 800px;
+}
 footer{
     background-color: #632c2c;
     margin-top:20px;
